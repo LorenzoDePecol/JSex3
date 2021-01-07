@@ -18,6 +18,8 @@ var operations = function() {
 
         var str = "<tr><td>"+n1+"</td><td>"+n2+"</td><td>"+sign+"</td><td>"+res+"</td></tr>";
         localStorage.setItem("operation", str);
+
+        var lastOp = localStorage.getItem("operation");
         $("#res").append(str);
     }
 }
