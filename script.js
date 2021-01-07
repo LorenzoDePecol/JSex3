@@ -20,6 +20,8 @@ var operations = function() {
         localStorage.setItem("operation", str);
 
         var lastOp = localStorage.getItem("operation");
+
+        
         $("#res").append(str);
     }
 }
