@@ -16,8 +16,9 @@ var operations = function() {
             case "/": res = n1/n2; break;
         };
 
-        $("#res").append("<tr><td>"+n1+"</td><td>"+n2+"</td><td>"+sign+"</td><td>"+res+"</td></tr>");
-        
+        var str = "<tr><td>"+n1+"</td><td>"+n2+"</td><td>"+sign+"</td><td>"+res+"</td></tr>";
+        localStorage.setItem("operation", str);
+        $("#res").append(str);
     }
 }
 
