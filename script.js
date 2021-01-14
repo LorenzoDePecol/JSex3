@@ -18,8 +18,9 @@ var operations = function() {
 
         var str = "<tr><td>"+n1+"</td><td>"+n2+"</td><td>"+sign+"</td><td>"+res+"</td></tr>";
 
-        ArrayLine = JSON.parse(localStorage)
-        localStorage.setItem("array",JSON.stringify(ArrayLine));
+        arrayLine = JSON.parse(localStorage.getItem("array") || "[]");
+        arrayLine.push(str);
+        localStorage.setItem("array",JSON.stringify(arrayLine));
 
         var lastOp = localStorage.getItem("operation");
 
