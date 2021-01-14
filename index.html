@@ -31,8 +31,18 @@
             crossorigin="anonymous">
         </script>
         <script>
-            if(typeof lastOp === "undefined" || lastOp === null){
-                $("#res").append(localStorage.getItem("operation"));
+            if($("td").length === 0){
+                var arrayLine = JSON.parse(localStorage.getItem("array") || "[]")
+                if(arrayLine !== []){
+                    console.log("stampa elementi");
+                    arrayLine.forEach(function (item) {
+                        console.log(item);
+                    });
+                    console.log("popolo tab");
+                    arrayLine.forEach(function (item){
+                        $("#tab").append(item);
+                    });
+                }
             }
         </script>
     </body>
