@@ -17,7 +17,9 @@ var operations = function() {
         };
 
         var str = "<tr><td>"+n1+"</td><td>"+n2+"</td><td>"+sign+"</td><td>"+res+"</td></tr>";
-        localStorage.setItem("operation", str);
+
+        ArrayLine = JSON.parse(localStorage)
+        localStorage.setItem("array",JSON.stringify(ArrayLine));
 
         var lastOp = localStorage.getItem("operation");
 
